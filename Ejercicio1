@@ -1,1 +1,30 @@
+import java.util.Scanner;
+
+public class Examen1 {
+
+    public static void main(String[] args) {
+      
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Escriba la frase.");
+    String cadena = scanner.nextLine();
+
+    if (cadena.length() < 10) {
+        System.out.println("Mínimo 10 carácteres.");
+        
+    } else {
+        String cadenaInvertida = invertirCadena(cadena);
+        System.out.println("Su frase al revés es: " + cadenaInvertida);
+    }
+
+    }
+
+    private static String invertirCadena(String cadena) {
+        StringBuilder cadenaInvertida = new StringBuilder();
+        for (int i = cadena.length() -1; i >= 0; i--) {
+            cadenaInvertida.append(cadena.charAt(i));
+        }
+        return cadenaInvertida.toString();
+    }
+    
+}
 
