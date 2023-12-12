@@ -1,1 +1,19 @@
+import java.util.Scanner;
+
+public class Examen4 {
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Escriba el número: ");
+        
+        int numero = scanner.nextInt();
+        String binario = convertirABinario(numero);
+        System.out.println("La representacion binaria de " + numero + " es: " + binario);
+    
+    }
+
+    private static String convertirABinario(int numero) {
+        return Integer.toBinaryString(numero);
+    }
+}
 
